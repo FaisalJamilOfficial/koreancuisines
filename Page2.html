@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Korean Cusinies</title>
+    <script>
+        function joinfunction() {
+            window.open("lowerRightPage.html", "_self");
+        }
+
+        function check() {
+            if (document.getElementById("textUName").value != "") {
+                if (document.getElementById("textUID").value != "") {
+                    if (document.getElementById("textPassword").value != "") {
+                        if (document.getElementById("textConfirmPassword").value.match(document.getElementById("textPassword").value)) {
+                            document.getElementById('loading').style.display = 'block';
+                            joinfunction();
+                        } else {
+                            (alert("Password and Confirm Password do not match"));
+                        }
+                    } else {
+                        (alert("Enter Password"));
+                    }
+                } else {
+                    alert("Enter User ID");
+                }
+            } else {
+                alert("Enter User Name");
+            }
+        }
+    </script>
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #235265;
+            /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 32%;
+            right: 41%;
+            display: none
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #buttonLogin:hover {
+            background-color: #F5F5F5
+        }
+        
+        #buttonLogin:active {
+            background-color: #F5F5F5;
+            transform: translateY(2px)
+        }
+    </style>
+</head>
+
+<body background="lowerRightPageBackground.jpg" bgcolor="#A1B494">
+    <div align="center">
+
+        <form name="formPageRegister">
+            <table style="padding-top: 150px;color:#235265;font-size:50px;font-family:Times New Roman;">
+                <tr>
+                    <td style="text-align: end">User Name</td>
+                    <td> <input type="text" id="textUName" style="border-radius: 10px; width: 300px; height: 40px; font-size: 35px;  background: transparent;  cursor: pointer;outline: none;" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: end">User ID</td>
+                    <td><input type="text" id="textUID" style="border-radius: 10px; width: 300px; height: 40px; font-size: 35px; background: transparent;  cursor: pointer;outline: none;" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: end">Password</td>
+                    <td> <input type="password" id="textPassword" style="border-radius: 10px; width: 300px; height: 40px; font-size: 35px; background: transparent;  cursor: pointer;outline: none;" /></td>
+                </tr>
+                <tr>
+                    <td style="text-align: end">Confirm Password</td>
+                    <td><input type="password" id="textConfirmPassword" style="border-radius: 10px; width: 300px; height: 40px; font-size: 35px; background: transparent;  cursor: pointer;outline: none;" /></td>
+                </tr <tr>
+                <td colspan="2" align=center> <input type="button" id="buttonLogin" value="Register" style="border-radius: 50px; width:  250px; height: 60px; font-size: 40px; font-weight: bold; color:#235265; border: none; cursor: pointer;outline: none; " onclick="check()" /></td>
+                </tr>
+            </table>
+
+            <span id="loading" class="loader"></span>
+        </form>
+    </div>
+
+    <h1 style="padding-top: 138px; font-size: 15px; text-align: center"><a href="http://docofficial.blogspot.com/" target="_blank" style="text-decoration: none;  color:lightgray"> Developed by Doctors of Computer</a></h1>
+</body>
+
+</html>

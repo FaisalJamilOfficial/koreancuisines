@@ -1,0 +1,52 @@
+<html>
+
+<title>Korean Cuisines</title>
+<script>
+    openNewWindow = function() {
+        window.open("Page1.html", "_parent");
+    };
+</script>
+<style>
+    #logout {
+        position: absolute;
+        top: 35%;
+        right: 2%;
+    }
+    
+    #logout:hover {
+        background-color: #F5F5F5
+    }
+    
+    #logout:active {
+        background-color: #F5F5F5;
+        transform: translateY(2px)
+    }
+</style>
+
+</head>
+
+<body bgcolor="#667815" background="frameBackground.jpg">
+    <style>
+        div {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 24px;
+            font-weight: 900;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            display: inline-block;
+        }
+        
+        button {
+            float: right;
+        }
+    </style>
+
+    <button id="logout" onclick="openNewWindow()" style="border-radius: 60px; width:  70px; height: 35px; font-size: 15px; font-weight: bold; color:darkgrey; border: none; cursor: pointer;outline: none;"> Logout </button>
+
+    <div style="color:lightgrey;font-size:60px;font-family:algerian;" align="center"> <b>Korean Cuisines <b></div>
+</body>
+
+</html>
